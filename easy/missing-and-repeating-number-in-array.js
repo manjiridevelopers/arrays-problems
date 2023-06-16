@@ -19,6 +19,8 @@ function missingNumInArray(array) {
 missingNumInArray([3, 1, 2, 5, 4, 6, 7, 5]);
 
 /* OPTIMAL */
+
+/* Note: This way can lead to memory overflow */
 function missingNumInArrayTwo(array) {
   let n = array.length;
   let sum = (n * (n + 1)) / 2;
