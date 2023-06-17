@@ -45,6 +45,11 @@ console.log(resultWithHash);
 
 */
 
+/* Time Comlexity: O(N) + O(N * logN) | Space Complexity: O(1)
+    O(N) for loop
+    O(N * logN) fro sorting
+*/
+
 function twoSumWithTwoPointers(arr, target) {
   let sortedArr = [...arr].sort((a, b) => a - b);
   let start = 0;
