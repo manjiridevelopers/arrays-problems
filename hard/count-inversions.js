@@ -16,7 +16,7 @@ console.log(result);
 
 /* Optimized approach:  Time Complexity -> O(nlogn) | Space Complexity -> O(n) */
 
-function mergeSort(arr, count) {
+function mergeSort(arr) {
   if (arr.length <= 1) return { sortedArr: arr, count: 0 };
   let mid = Math.floor(arr.length / 2);
   let leftArr = arr.slice(0, mid);
@@ -47,12 +47,11 @@ function merge(leftArr, rightArr) {
     }
   }
 
-  return { sortedArr: arr, count: count };
+  return { sortedArr: sortedArr, count: count };
 }
 
 function countInversionsOptimized(arr) {
-  let count = 0;
-  mergeSort(arr, count);
+  const { _, count } = mergeSort(arr);
   return count;
 }
 
